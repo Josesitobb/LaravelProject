@@ -1,8 +1,25 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
+        <div>
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                {{ __('Dashboard') }}
+            </h2>
+            
+            <div class="mt-2 space-x-4">
+                <a href="{{ route('categorias.index') }}" class="text-sm text-blue-600 hover:underline">
+                    Categorías
+                </a>
+                <a href="{{ route('subcategorias.index') }}" class="text-sm text-blue-600 hover:underline">
+                    Subcategorías
+                </a>
+                <a href="{{ route('productos.index') }}" class="text-sm text-blue-600 hover:underline">
+                    Productos
+                </a>
+                <a href="{{ route('usuarios.index') }}" class="text-sm text-blue-600 hover:underline">
+                    Usuarios
+                </a>
+            </div>
+        </div>
     </x-slot>
 
     <div class="py-12">
@@ -14,8 +31,4 @@
             </div>
         </div>
     </div>
-    <a href="{{route('categorias.index')}}"> Categorias </a>
-    <a href="{{route('categorias.index')}}"> Subcategorias </a>
-    <a href="{{route('categorias.index')}}"> Productos </a>
-    <a href="{{route('categorias.index')}}"> Usuarios </a>
 </x-app-layout>
